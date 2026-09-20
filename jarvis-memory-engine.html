@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Memory Engine</title>
+
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+
+body{
+margin:0;
+background:#06111d;
+color:white;
+display:flex;
+min-height:100vh;
+}
+
+.sidebar{
+width:280px;
+background:#0b1b2a;
+padding:25px;
+border-right:1px solid #20384c;
+}
+
+.logo{
+font-size:23px;
+font-weight:bold;
+margin-bottom:35px;
+}
+
+.logo span{
+color:#00c6ff;
+}
+
+.menu{
+background:#102536;
+padding:14px;
+border-radius:12px;
+margin:10px 0;
+color:#cbd5e1;
+}
+
+.main{
+flex:1;
+padding:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.box{
+background:#102536;
+border:1px solid #203b50;
+border-radius:20px;
+padding:25px;
+}
+
+h1{
+margin-top:0;
+}
+
+label{
+display:block;
+font-size:13px;
+color:#94a3b8;
+margin:15px 0 6px;
+}
+
+input,textarea,select{
+
+width:100%;
+padding:13px;
+
+background:#071522;
+
+border:1px solid #29455b;
+
+border-radius:10px;
+
+color:white;
+
+}
+
+textarea{
+height:110px;
+}
+
+
+button{
+
+background:#00c6ff;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-weight:bold;
+margin-top:15px;
+cursor:pointer;
+
+}
+
+
+.memory{
+
+border-left:4px solid #00c6ff;
+
+}
+
+
+.tag{
+
+display:inline-block;
+
+background:#12344b;
+
+padding:8px 12px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+.item{
+
+background:#091722;
+
+padding:15px;
+
+border-radius:12px;
+
+margin:10px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<aside class="sidebar">
+
+<div class="logo">
+J.A.R.V.I.S
+<span>MEMORY</span>
+</div>
+
+
+<div class="menu">🧠 Memórias</div>
+
+<div class="menu">📚 Documentos</div>
+
+<div class="menu">🏥 Clínica</div>
+
+<div class="menu">👥 Pacientes</div>
+
+<div class="menu">⚙ Processos</div>
+
+<div class="menu">📊 Indicadores</div>
+
+
+</aside>
+
+
+
+<main class="main">
+
+
+<h1>
+🧠 J.A.R.V.I.S Memory Engine
+</h1>
+
+<p>
+Base de conhecimento permanente da inteligência da clínica.
+</p>
+
+
+<div class="grid">
+
+
+<section class="box memory">
+
+
+<h2>
+Adicionar conhecimento
+</h2>
+
+
+<label>
+Categoria
+</label>
+
+
+<select>
+
+<option>Clínica</option>
+
+<option>Serviços</option>
+
+<option>Pacientes</option>
+
+<option>Equipe</option>
+
+<option>Processos</option>
+
+<option>Financeiro</option>
+
+<option>Marketing</option>
+
+</select>
+
+
+
+<label>
+Título da memória
+</label>
+
+
+<input placeholder="Ex: Protocolo pós Botox">
+
+
+
+<label>
+Informação para ensinar ao J.A.R.V.I.S
+</label>
+
+
+<textarea placeholder="Digite o conhecimento..."></textarea>
+
+
+
+<button>
+Ensinar J.A.R.V.I.S
+</button>
+
+
+</section>
+
+
+
+<section class="box">
+
+
+<h2>
+Memórias aprendidas
+</h2>
+
+
+<div class="item">
+
+📋 Pós Botox
+
+<br>
+
+Categoria:
+Processos
+
+</div>
+
+
+
+<div class="item">
+
+✨ Harmonização Facial
+
+<br>
+
+Categoria:
+Serviços
+
+</div>
+
+
+
+<div class="item">
+
+💎 Clientes Premium
+
+<br>
+
+Categoria:
+Pacientes
+
+</div>
+
+
+
+</section>
+
+
+
+
+<section class="box">
+
+
+<h2>
+Biblioteca IA
+</h2>
+
+
+<div class="item">
+📄 Protocolos.pdf
+</div>
+
+
+<div class="item">
+📄 Manual Atendimento.pdf
+</div>
+
+
+<div class="item">
+📄 Lista Serviços.xlsx
+</div>
+
+
+<button>
+Adicionar documento
+</button>
+
+
+</section>
+
+
+</div>
+
+
+
+<div class="box" style="margin-top:25px">
+
+
+<h2>
+🔎 Busca Inteligente da Memória
+</h2>
+
+
+<input placeholder="Pergunte ao conhecimento da clínica...">
+
+
+<button>
+Pesquisar memória
+</button>
+
+
+
+<br><br>
+
+
+<div class="item">
+
+Exemplo:
+
+<br><br>
+
+Pergunta:
+
+"Qual procedimento tem maior margem?"
+
+<br><br>
+
+Resposta futura:
+
+"O J.A.R.V.I.S consultará serviços, custos e faturamento para responder."
+
+</div>
+
+
+</div>
+
+
+
+</main>
+
+
+</body>
+
+</html>
