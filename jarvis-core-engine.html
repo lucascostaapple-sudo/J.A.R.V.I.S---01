@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Core Engine</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#06111d;color:#fff;display:flex;min-height:100vh}
+.sidebar{width:290px;background:#0b1b2a;padding:25px;border-right:1px solid #20384c}
+.logo{font-size:23px;font-weight:bold;margin-bottom:35px}.logo span{color:#00c6ff}
+.menu{background:#102536;padding:14px;border-radius:12px;margin:10px 0;color:#cbd5e1}
+.main{flex:1;padding:30px}
+h1{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.box{background:#102536;border:1px solid #203b50;border-radius:20px;padding:25px}
+label{display:block;color:#94a3b8;font-size:13px;margin:12px 0 6px}
+input,textarea,select{width:100%;padding:13px;background:#071522;border:1px solid #29455b;color:white;border-radius:10px}
+textarea{height:100px}
+button{background:#00c6ff;border:0;padding:13px 22px;border-radius:10px;font-weight:bold;margin-top:15px}
+.tag{display:inline-block;background:#12344b;padding:8px 12px;border-radius:20px;margin:5px}
+.ai{border-left:4px solid #00c6ff}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+<div class="logo">J.A.R.V.I.S <span>ENGINE</span></div>
+<div class="menu">🧠 Personalidade IA</div>
+<div class="menu">🏥 Conhecimento Clínica</div>
+<div class="menu">✨ Serviços</div>
+<div class="menu">📋 Regras Atendimento</div>
+<div class="menu">🤖 Modelos IA</div>
+<div class="menu">📚 Memória</div>
+</aside>
+
+<main class="main">
+
+<h1>Central de Alimentação do J.A.R.V.I.S</h1>
+<p>Configure o cérebro estratégico da sua clínica.</p>
+
+<div class="grid">
+
+<div class="box ai">
+<h2>🤖 Personalidade do J.A.R.V.I.S</h2>
+
+<label>Nome do agente</label>
+<input value="J.A.R.V.I.S">
+
+<label>Personalidade</label>
+<textarea>Consultor premium de clínicas. Humano, acolhedor, estratégico e especialista.</textarea>
+
+<label>Tom de voz</label>
+<select>
+<option>Elegante e humano</option>
+<option>Consultivo</option>
+<option>Especialista</option>
+</select>
+
+<button>Salvar personalidade</button>
+</div>
+
+
+<div class="box">
+<h2>🏥 Memória da Clínica</h2>
+
+<label>Nome da clínica</label>
+<input placeholder="Digite o nome">
+
+<label>História da clínica</label>
+<textarea placeholder="Conte a história da empresa"></textarea>
+
+<label>Público alvo</label>
+<input placeholder="Ex: Mulheres 30-55 anos">
+
+<label>Diferenciais</label>
+<textarea placeholder="Por que os clientes escolhem esta clínica?"></textarea>
+
+<button>Ensinar ao J.A.R.V.I.S</button>
+</div>
+
+
+<div class="box">
+<h2>✨ Cadastro de Serviço</h2>
+
+<label>Nome do procedimento</label>
+<input placeholder="Ex: Harmonização Facial">
+
+<label>Preço</label>
+<input placeholder="R$">
+
+<label>Descrição</label>
+<textarea placeholder="Benefícios, indicação e cuidados"></textarea>
+
+<button>Adicionar conhecimento</button>
+</div>
+
+
+<div class="box">
+<h2>📋 Regras Humanas</h2>
+
+<textarea>
+Nunca responder como robô.
+
+Criar conexão antes de vender.
+
+Entender necessidade do paciente.
+
+Nunca inventar informações.
+
+Preservar tom premium.
+</textarea>
+
+<button>Salvar regras</button>
+</div>
+
+
+<div class="box">
+<h2>🤖 Conexões de IA</h2>
+
+<div class="tag">GPT</div>
+<div class="tag">Claude</div>
+<div class="tag">Gemini</div>
+<div class="tag">Llama</div>
+<div class="tag">Adicionar IA +</div>
+
+<label>IA principal</label>
+<select>
+<option>OpenAI GPT</option>
+<option>Claude</option>
+<option>Gemini</option>
+</select>
+
+<button>Configurar API</button>
+</div>
+
+
+<div class="box">
+<h2>📚 Memória Aprendida</h2>
+
+<p>Documentos:</p>
+<p>📄 Protocolos clínicos</p>
+<p>📄 Manual atendimento</p>
+<p>📄 Lista serviços</p>
+
+<p>
+Informações aprendidas:
+<b>0</b>
+</p>
+
+<button>Enviar documento</button>
+</div>
+
+</div>
+
+</main>
+</body>
+</html>
