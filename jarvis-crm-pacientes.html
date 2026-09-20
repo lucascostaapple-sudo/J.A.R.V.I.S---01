@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S CRM Inteligente</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#06111d;color:white;display:flex;min-height:100vh}
+.sidebar{width:270px;background:#0b1b2a;padding:25px;border-right:1px solid #20384c}
+.logo{font-size:22px;font-weight:bold;margin-bottom:35px}.logo span{color:#00c6ff}
+.menu{padding:14px;background:#102536;border-radius:12px;margin:10px 0;color:#cbd5e1}
+.main{flex:1;padding:35px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.search{background:#102536;border:1px solid #29455b;color:white;padding:14px;border-radius:12px;width:300px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:25px;margin-top:25px}
+.box{background:#102536;border:1px solid #203b50;border-radius:20px;padding:22px}
+.patient{padding:18px;background:#091722;border-radius:15px;margin:12px 0}
+.tag{display:inline-block;padding:7px 12px;background:#12344b;border-radius:20px;margin-top:10px}
+.green{color:#22c55e}.yellow{color:#facc15}.red{color:#ef4444}
+button{background:#00c6ff;border:0;padding:12px 18px;border-radius:10px;margin-top:10px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+<div class="logo">J.A.R.V.I.S <span>CRM</span></div>
+<div class="menu">👥 Pacientes</div>
+<div class="menu">⭐ Clientes VIP</div>
+<div class="menu">⚠ Risco de abandono</div>
+<div class="menu">📅 Retornos</div>
+<div class="menu">📲 Campanhas IA</div>
+</aside>
+
+<main class="main">
+
+<div class="header">
+<div>
+<h1>CRM Inteligente de Pacientes</h1>
+<p>O J.A.R.V.I.S acompanha o relacionamento da clínica.</p>
+</div>
+<input class="search" placeholder="Buscar paciente...">
+</div>
+
+<div class="grid">
+
+<section class="box">
+<h2>Pacientes Monitorados</h2>
+
+<div class="patient">
+<h3>Maria Souza</h3>
+<span class="green">● Cliente Premium</span>
+<p>Último procedimento: Bioestimulador</p>
+<p>Última visita: 92 dias atrás</p>
+<p>Investimento histórico: R$ 12.800</p>
+<div class="tag">Probabilidade retorno: 89%</div>
+<br>
+<button>Ação IA: Criar campanha</button>
+</div>
+
+
+<div class="patient">
+<h3>Carolina Mendes</h3>
+<span class="yellow">● Acompanhar</span>
+<p>Último procedimento: Botox</p>
+<p>Último contato: 60 dias</p>
+<div class="tag">Oportunidade detectada</div>
+</div>
+
+
+<div class="patient">
+<h3>Fernanda Alves</h3>
+<span class="red">● Em risco</span>
+<p>Cancelou avaliação</p>
+<p>Sem contato há 150 dias</p>
+<button>Reativar paciente</button>
+</div>
+
+</section>
+
+
+<section>
+
+<div class="box">
+<h2>Análise J.A.R.V.I.S</h2>
+<p>🧠 186 pacientes sem retorno</p>
+<p>💎 42 clientes premium</p>
+<p>📈 73 oportunidades encontradas</p>
+</div>
+
+<div class="box" style="margin-top:20px">
+<h2>Perfil do Paciente</h2>
+<p>Histórico completo</p>
+<p>Procedimentos</p>
+<p>Preferências</p>
+<p>Observações IA</p>
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+</body>
+</html>
