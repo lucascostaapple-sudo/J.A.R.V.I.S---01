@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Learning Engine</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#06111d;color:white;display:flex;min-height:100vh}
+.side{width:280px;background:#0b1b2a;padding:25px;border-right:1px solid #20384c}
+.logo{font-size:22px;font-weight:bold;margin-bottom:35px}.logo span{color:#00c6ff}
+.item{background:#102536;padding:14px;border-radius:12px;margin:10px 0;color:#cbd5e1}
+.main{flex:1;padding:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.box{background:#102536;border:1px solid #203b50;border-radius:20px;padding:22px}
+label{display:block;color:#94a3b8;font-size:13px;margin:12px 0 6px}
+input,textarea,select{width:100%;background:#071522;color:white;border:1px solid #29455b;border-radius:10px;padding:12px}
+textarea{height:100px}
+button{background:#00c6ff;border:0;border-radius:10px;padding:12px 18px;margin-top:15px;font-weight:bold}
+.tag{display:inline-block;background:#12344b;padding:8px;border-radius:20px;margin:5px}
+.ai{border-left:4px solid #00c6ff}
+</style>
+</head>
+<body>
+<aside class="side">
+<div class="logo">J.A.R.V.I.S <span>LEARNING</span></div>
+<div class="item">🧠 Memórias</div>
+<div class="item">📄 Documentos</div>
+<div class="item">💬 Conversas</div>
+<div class="item">🤖 Modelos IA</div>
+<div class="item">🎭 Personalidade</div>
+</aside>
+
+<main class="main">
+<h1>🧠 J.A.R.V.I.S Learning Engine</h1>
+<p>Centro de aprendizado e evolução da inteligência da clínica.</p>
+
+<div class="grid">
+
+<div class="box ai">
+<h2>Ensinar nova memória</h2>
+<label>Categoria</label>
+<select>
+<option>Processo</option>
+<option>Atendimento</option>
+<option>Serviço</option>
+<option>Marketing</option>
+<option>Financeiro</option>
+</select>
+
+<label>Título</label>
+<input placeholder="Ex: Como tratar objeção de preço">
+
+<label>Conhecimento</label>
+<textarea placeholder="Escreva o aprendizado..."></textarea>
+
+<label>Importância</label>
+<select>
+<option>★★★★★ Crítico</option>
+<option>★★★★ Alto</option>
+<option>★★★ Normal</option>
+</select>
+
+<button>Salvar aprendizado</button>
+</div>
+
+<div class="box">
+<h2>Biblioteca de conhecimento</h2>
+<p>📄 Protocolos clínicos</p>
+<p>📄 Manual de atendimento</p>
+<p>📄 Tabela de procedimentos</p>
+<p>📄 Treinamento equipe</p>
+<button>Enviar documento</button>
+</div>
+
+<div class="box">
+<h2>Conselho de IAs</h2>
+<div class="tag">GPT Estratégia</div>
+<div class="tag">Claude Documentos</div>
+<div class="tag">Gemini Multimodal</div>
+<div class="tag">Modelos locais</div>
+<p>O J.A.R.V.I.S escolhe a IA adequada para cada tarefa.</p>
+</div>
+
+</div>
+
+<div class="box" style="margin-top:20px">
+<h2>Memória de Conversas</h2>
+<p>O agente analisa atendimentos e identifica:</p>
+<ul>
+<li>Objeções frequentes</li>
+<li>Preferências dos pacientes</li>
+<li>Padrões de compra</li>
+<li>Melhor abordagem comercial</li>
+</ul>
+</div>
+
+<div class="box" style="margin-top:20px">
+<h2>Simulador de inteligência</h2>
+<p><b>Pergunta:</b> "Como responder um paciente com medo de resultado artificial?"</p>
+<p class="ai">J.A.R.V.I.S analisará memória, protocolos e personalidade antes de gerar a resposta.</p>
+</div>
+
+</main>
+</body>
+</html>
