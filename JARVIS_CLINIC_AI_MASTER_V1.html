@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Clinic AI MASTER V1</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#06111d;color:#fff;display:flex;min-height:100vh}
+aside{width:280px;background:#0b1b2a;padding:25px;border-right:1px solid #20384c}
+.logo{font-size:24px;font-weight:bold;margin-bottom:35px}.logo span{color:#00c6ff}
+.menu{padding:13px;background:#102536;border-radius:12px;margin:8px 0;cursor:pointer}
+.menu:hover{background:#123b55}
+main{flex:1;padding:30px}
+.page{display:none}.page.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card,.box{background:#102536;border:1px solid #203b50;border-radius:20px;padding:22px;margin-bottom:20px}
+.number{font-size:32px;color:#00c6ff}
+input,textarea,select{width:100%;padding:12px;background:#071522;color:#fff;border:1px solid #29455b;border-radius:10px;margin-top:8px}
+textarea{height:100px}
+button{background:#00c6ff;border:0;padding:12px 18px;border-radius:10px;margin-top:15px;font-weight:bold}
+.tag{display:inline-block;background:#12344b;padding:8px;border-radius:20px;margin:5px}
+.ai{border-left:4px solid #00c6ff}
+</style>
+</head>
+<body>
+<aside>
+<div class="logo">J.A.R.V.I.S <span>MASTER AI</span></div>
+<div class="menu" onclick="openTab('dash')">📊 Dashboard</div>
+<div class="menu" onclick="openTab('core')">🤖 Core IA</div>
+<div class="menu" onclick="openTab('memory')">🧠 Memória</div>
+<div class="menu" onclick="openTab('crm')">👥 CRM</div>
+<div class="menu" onclick="openTab('finance')">💰 Financeiro</div>
+<div class="menu" onclick="openTab('whatsapp')">📲 WhatsApp AI</div>
+<div class="menu" onclick="openTab('router')">🌐 IA Router</div>
+</aside>
+
+<main>
+
+<section id="dash" class="page active">
+<h1>Dashboard Executivo</h1>
+<div class="grid">
+<div class="card">Pacientes<div class="number">2.438</div></div>
+<div class="card">Faturamento<div class="number">R$184k</div></div>
+<div class="card">Oportunidades IA<div class="number">73</div></div>
+</div>
+<div class="box ai">🤖 J.A.R.V.I.S analisou a clínica e encontrou oportunidades de retorno de pacientes.</div>
+</section>
+
+<section id="core" class="page">
+<h1>J.A.R.V.I.S Core</h1>
+<div class="box ai">
+<p><b>Personalidade:</b> humano, estratégico, elegante e consultivo.</p>
+<textarea placeholder="Pergunte ao J.A.R.V.I.S"></textarea>
+<button>Enviar</button>
+</div>
+</section>
+
+<section id="memory" class="page">
+<h1>Memory Engine</h1>
+<div class="box">
+<input placeholder="Título da memória">
+<textarea placeholder="Ensine uma informação para o J.A.R.V.I.S"></textarea>
+<select><option>Clínica</option><option>Serviço</option><option>Processo</option><option>Financeiro</option></select>
+<button>Salvar memória</button>
+</div>
+</section>
+
+<section id="crm" class="page">
+<h1>CRM Inteligente</h1>
+<div class="box">
+<input placeholder="Nome do paciente">
+<input placeholder="Procedimento">
+<input placeholder="Status">
+<button>Cadastrar</button>
+</div>
+</section>
+
+<section id="finance" class="page">
+<h1>Financeiro IA</h1>
+<div class="box">
+<p>Receita: R$184.000</p>
+<p>Margem: 46%</p>
+<p>Ticket médio: R$3.250</p>
+</div>
+</section>
+
+<section id="whatsapp" class="page">
+<h1>WhatsApp Human AI</h1>
+<div class="box ai">
+<p>Paciente: "Gostaria de saber sobre harmonização."</p>
+<p>J.A.R.V.I.S: "Olá! Vou entender seu objetivo para indicar a melhor experiência para você 😊"</p>
+</div>
+</section>
+
+<section id="router" class="page">
+<h1>IA Router</h1>
+<div class="box">
+<span class="tag">GPT</span>
+<span class="tag">Claude</span>
+<span class="tag">Gemini</span>
+<span class="tag">Llama</span>
+<textarea placeholder="Configurações das APIs (serão conectadas pelo backend)"></textarea>
+<button>Salvar configuração</button>
+</div>
+</section>
+
+</main>
+
+<script>
+function openTab(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+localStorage.setItem('jarvis_last_tab',id);
+}
+</script>
+</body>
+</html>
