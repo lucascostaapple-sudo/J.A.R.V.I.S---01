@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Clinic AI Demo</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:#07111c;color:#fff;display:flex;min-height:100vh}
+.sidebar{width:260px;background:#0d1b2a;padding:25px}
+.logo{font-size:22px;font-weight:bold;margin-bottom:35px}
+.logo span{color:#00c6ff}
+.item{padding:14px;border-radius:12px;margin:8px 0;color:#b8c7d9;cursor:pointer}
+.item:hover{background:#163149;color:#fff}
+.main{flex:1;padding:35px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}
+.card,.box{background:#102233;border:1px solid #1d354a;border-radius:18px;padding:22px}
+.big{font-size:32px;margin-top:12px}
+.ai{margin-top:25px;padding:25px;border-radius:20px;background:linear-gradient(135deg,#12334a,#091722)}
+button{background:#00c6ff;border:0;padding:10px 18px;border-radius:10px;cursor:pointer}
+.page{display:none}.active{display:block}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.sidebar{width:200px}}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+<div class="logo">J.A.R.V.I.S <span>Clinic AI</span></div>
+<div class="item" onclick="show('dash')">Dashboard</div>
+<div class="item" onclick="show('core')">🤖 J.A.R.V.I.S Core</div>
+<div class="item" onclick="show('memory')">🧠 Memória</div>
+<div class="item" onclick="show('patients')">👥 Pacientes</div>
+<div class="item" onclick="show('finance')">💰 Financeiro</div>
+</aside>
+<main class="main">
+<section id="dash" class="page active">
+<h1>Dashboard Executivo</h1>
+<p>Diagnóstico inteligente da clínica em tempo real.</p>
+<div class="cards">
+<div class="card">Pacientes ativos<div class="big">2.438</div></div>
+<div class="card">Agendamentos<div class="big">37</div></div>
+<div class="card">Faturamento<div class="big">R$184k</div></div>
+<div class="card">Satisfação<div class="big">98%</div></div>
+</div>
+<div class="ai">🤖 <b>J.A.R.V.I.S analisou:</b><br><br>Existe oportunidade de reativar pacientes sem retorno há mais de 90 dias.</div>
+</section>
+
+<section id="core" class="page">
+<h1>J.A.R.V.I.S Core</h1>
+<div class="box">
+<p><b>Usuário:</b> Qual minha maior oportunidade hoje?</p>
+<p><b>IA:</b> Identifiquei 42 pacientes com potencial de retorno. Recomendo campanha personalizada.</p>
+</div>
+</section>
+
+<section id="memory" class="page">
+<h1>Memória da Clínica</h1>
+<div class="box">Serviços carregados: Botox, Harmonização, Laser, Bioestimuladores.</div>
+<div class="box">Equipe, processos e indicadores preparados para integração.</div>
+</section>
+
+<section id="patients" class="page">
+<h1>Pacientes</h1>
+<div class="box">Maria Silva — Alto potencial de retorno<br>Último procedimento: 92 dias</div>
+</section>
+
+<section id="finance" class="page">
+<h1>Financeiro Inteligente</h1>
+<div class="box">Receita mensal: R$184.000<br>Ticket médio: R$1.850</div>
+</section>
+</main>
+<script>
+function show(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
