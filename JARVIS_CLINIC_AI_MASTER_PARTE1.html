@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S Clinic AI MASTER - Parte 1</title>
+
+<style>
+*{box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{
+margin:0;
+background:#06111d;
+color:#fff;
+display:flex;
+min-height:100vh;
+}
+.sidebar{
+width:290px;
+background:#0b1b2a;
+border-right:1px solid #20384c;
+padding:25px;
+}
+.logo{
+font-size:24px;
+font-weight:800;
+margin-bottom:35px;
+}
+.logo span{color:#00c6ff}
+.menu{
+padding:14px;
+margin:8px 0;
+border-radius:12px;
+background:#102536;
+color:#cbd5e1;
+cursor:pointer;
+}
+.menu:hover,.active{
+background:#123b55;
+color:#fff;
+}
+.main{
+flex:1;
+padding:30px;
+}
+.page{display:none}
+.page.active{display:block}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:25px;
+}
+.card,.box{
+background:#102536;
+border:1px solid #203b50;
+border-radius:20px;
+padding:22px;
+}
+.number{
+font-size:32px;
+margin-top:15px;
+color:#00c6ff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+input,textarea,select{
+width:100%;
+padding:12px;
+background:#071522;
+color:#fff;
+border:1px solid #29455b;
+border-radius:10px;
+margin-top:8px;
+}
+
+textarea{height:100px}
+
+button{
+background:#00c6ff;
+border:0;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
+margin-top:15px;
+cursor:pointer;
+}
+
+.tag{
+display:inline-block;
+padding:8px 12px;
+background:#12344b;
+border-radius:20px;
+margin:5px;
+}
+
+.ai{
+border-left:4px solid #00c6ff;
+}
+
+@media(max-width:900px){
+.sidebar{width:220px}
+.cards,.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+<div class="logo">
+J.A.R.V.I.S
+<span>MASTER AI</span>
+</div>
+
+<div class="menu active" onclick="openPage('dashboard')">📊 Dashboard</div>
+<div class="menu" onclick="openPage('core')">🤖 J.A.R.V.I.S Core</div>
+<div class="menu" onclick="openPage('memory')">🧠 Memory Engine</div>
+<div class="menu" onclick="openPage('crm')">👥 CRM Pacientes</div>
+<div class="menu" onclick="openPage('finance')">💰 Financeiro</div>
+<div class="menu" onclick="openPage('whatsapp')">📲 WhatsApp AI</div>
+<div class="menu" onclick="openPage('ias')">🌐 IA Router</div>
+
+</aside>
+
+
+<main class="main">
+
+
+<section id="dashboard" class="page active">
+
+<h1>Dashboard Executivo</h1>
+<p>Centro de comando da clínica inteligente.</p>
+
+<div class="cards">
+
+<div class="card">
+Pacientes ativos
+<div class="number">2.438</div>
+</div>
+
+<div class="card">
+Faturamento
+<div class="number">R$184k</div>
+</div>
+
+<div class="card">
+Oportunidades IA
+<div class="number">73</div>
+</div>
+
+<div class="card">
+Satisfação
+<div class="number">98%</div>
+</div>
+
+</div>
+
+
+<div class="box ai" style="margin-top:25px">
+
+<h2>🤖 J.A.R.V.I.S Análise</h2>
+
+<p>
+Identifiquei pacientes sem retorno, oportunidades comerciais
+e pontos de melhoria operacional.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="core" class="page">
+
+<h1>J.A.R.V.I.S Core</h1>
+
+<div class="box ai">
+
+<h2>Conversa com o agente</h2>
+
+<p>
+"Olá, Dra. Ana. Analisei os dados atuais da clínica.
+Como posso ajudar hoje?"
+</p>
+
+<textarea placeholder="Digite sua pergunta ao J.A.R.V.I.S"></textarea>
+
+<button>Enviar para IA</button>
+
+</div>
+
+</section>
+
+
+
+<section id="memory" class="page">
+
+<h1>Memory Engine</h1>
+
+<div class="grid">
+
+<div class="box">
+
+<h3>Nova memória</h3>
+
+<input placeholder="Título">
+<textarea placeholder="Conhecimento da clínica"></textarea>
+
+<button>Salvar memória</button>
+
+</div>
+
+<div class="box">
+
+<h3>Categorias</h3>
+
+<span class="tag">Clínica</span>
+<span class="tag">Serviços</span>
+<span class="tag">Equipe</span>
+<span class="tag">Protocolos</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="crm" class="page">
+
+<h1>CRM Inteligente</h1>
+
+<div class="box">
+
+<input placeholder="Nome do paciente">
+
+<input placeholder="Último procedimento">
+
+<input placeholder="Status">
+
+<button>Cadastrar paciente</button>
+
+</div>
+
+</section>
+
+
+
+<section id="finance" class="page">
+
+<h1>Financeiro IA</h1>
+
+<div class="box">
+
+<h3>Indicadores</h3>
+
+<p>Receita mensal: R$184.000</p>
+<p>Margem estimada: 46%</p>
+<p>Ticket médio: R$3.250</p>
+
+</div>
+
+</section>
+
+
+
+<section id="whatsapp" class="page">
+
+<h1>WhatsApp Human AI</h1>
+
+<div class="box ai">
+
+<h3>Atendimento humanizado</h3>
+
+<p>
+Paciente: Gostaria de saber sobre harmonização.
+</p>
+
+<p>
+J.A.R.V.I.S:
+Olá! Que bom receber sua mensagem 😊
+Vou entender seu objetivo para indicar a melhor experiência.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="ias" class="page">
+
+<h1>IA Router</h1>
+
+<div class="box">
+
+<span class="tag">GPT</span>
+<span class="tag">Claude</span>
+<span class="tag">Gemini</span>
+<span class="tag">Llama</span>
+
+<br><br>
+
+<select>
+<option>IA principal: GPT</option>
+<option>IA principal: Claude</option>
+<option>IA principal: Gemini</option>
+</select>
+
+<button>Configurar conexão</button>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+function openPage(id){
+
+document.querySelectorAll('.page')
+.forEach(p=>p.classList.remove('active'));
+
+document.getElementById(id)
+.classList.add('active');
+
+}
+
+
+localStorage.setItem(
+"jarvis_status",
+"J.A.R.V.I.S MASTER iniciado"
+);
+
+</script>
+
+</body>
+</html>
